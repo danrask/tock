@@ -250,7 +250,6 @@ if ( typeof Function.prototype.bind != 'function' ) {
   Tock.prototype.msToTimecode = function (ms, show_ms) {
     var seconds  = this.zeroPad(Math.floor((ms / MS_PER_SEC) % 60), 2),
         minutes  = this.zeroPad(Math.floor((ms / MS_PER_MIN) % 60), 2),
-        hours    = this.zeroPad(Math.floor((ms / MS_PER_HOUR)), 2),
         millisec = (show_ms ? ':' + this.zeroPad(Math.floor(ms % MS_PER_SEC), 3) : '');
 
     return hours + ':' + minutes + ':' + seconds + millisec;
